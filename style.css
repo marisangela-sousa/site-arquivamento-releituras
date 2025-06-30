@@ -97,6 +97,10 @@ img{
     height: 20rem;
 }
 
+#main{
+    margin-top: 5rem;
+}
+
 @media (min-width: 320px) and (max-width = 599) {
   * {
     font-size: 14px;
