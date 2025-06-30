@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+           <li><a href="./index.html">HOME</a></li>
+            <li><a href="./sobre.html">SOBRE O PROJETO</a></li>
+        </ul>
+    </nav>
+    <nav class="content-nav">
+        <ul>
+            <li><a href="#estudo">Estudo da obra</a></li>
+            <li><a href="#experiencias">Experiências no p5.js</a></li>
+            <li><a href="#planejamento">Planejamento da releitura</a></li>
+            <li><a href="#execucao">Execução</a></li>
+        </ul>
+    </nav>
+    <section class="content" id="estudo">
+        <h1>Processo da Releitura</h1>
+        <p>O objetivo desse trabalho foi desenvolver uma releitura da obra "Derivadas de uma Imagem" de Waldemar Cordeiro utilizando o processing.</p>
+        <p>Esse trabalho envolveu várias etapas, que são: o estudo da obra, experiências no p5.js, planejamento da releitura e execução </p>
+        <p><b>Disclaimer:</b> o objetivo inicial desse projeto era produzir apenas um número limitado de releituras, porém durante o processo a possibilidade de tornar esse projeto em algo interativo surgiu e eu, como artista, acabei optanto por seguir esse caminho</p>
+        <article>
+            <h2>Estudo da obra "Derivada de uma Imagem</h2>
+            <hr>
+            <p>Aqui vou apresentar o que aprendi sobre a obra, desde os passos que Waldemar Cordeiro e Giorgio Moscati seguiram, até as decisões mais técnicas</p>
+            <p>
+                A execução desse trabalho teve várias etapas, que foram: escolher a imagem, digitalizar a imagem, escrever um programa para efetuar a operação "derivar", 
+                preparar os cartões com o programa, alimentar o computador com os cartões do programa e rodar o programa. Antes de inicar as etapas, algumas experiências 
+                foram realizadas para decidir qual seria o número ideal de pontos que a imagem seria dividida e o número de níveis de claro e escuro que seria utilizado. 
+            </p>
+            <p>
+                Antes de fazer ir para as etapas eles discutiram várias formas de transformação da imagem, como transformação geométrica, 
+                simetria, inversões, mudanças em contraste, granularidade, ruído aleatório, etc. Depois de muito pensar, Moscati se perguntou qual a transformação mais usada do 
+                ponto de vista científico, que, no caso, era a operação de derivação, e eles decidiram seguir com essa transformação.
+            </p>
+            <p>
+                Eles também imprimiram várias combinações de caracteres e sobreposição de caracteres para ter uma idéia das possibilidades. Para fazer pontos bem escuros 
+                eles fizeram uma sobreposição de linhas. Eles fizeram o número de pontos da imagem em 98 x 112 (10.976 pontos) e o número de níveis em sete.
+            </p>
+            Nesse processo, Waldemar Cordeiro ficou responsável por digitalizar a imagem, que na época era feita por meio de cartões perfurados com os dasos da imagem, 
+            e Giorgio Moscati ficou com a tarefa de preparar e rodar os programas
+            <p>
+                Waldemar Cordeiro escolheu um pôster promocional do dia dos namorados, ma imagem com forte conteúdo humano e emotivo para ser transformada por uma 'máquina 
+                fria e calculista', e atribuiu um número de zero a seis a cada um dos 10.976 pontos da imagem, conforme o nível de preto no ponto. 
+                Para a fase de programação, Moscati teve ajuda de um estudante chamado Wisnick.
+            </p>
+            <p>
+                Para realizar uma derivada numericamente, eles fizeram a diferença entre um número e seu próximo número, tomando sempre como positivo. Sendo assim, 
+                se uma linha tivesse a seguinte estrutura: 000000666665553211111000000; a linha derivada teria a seguinte estrutura: 000000600001002110000100000. 
+            </p>
+            <p>
+                 
+                No desenvolvimento do programa algumas medidas foram tomadas para garantir que o programa identificasse corretamente as quebras de intensidade independente 
+                da direção que elas ocorressem, evitando distorções indesejadas.
+            </p>
+            <p>
+                Após a perfuração com os dados do programa e da imagem, eles colocaram a imagem digitalizada no computador e 
+                o computador forneceu a imagem derivada, chamada de grau um. Eles decidiram colocar a imagem derivada no computador novamente para fazer uma nova derivada, 
+                chamada de grau dois, e repetiram o processo para conseguir a derivada três, chamada de grau três.
+            </p>
+            <p>
+                Assim como eles esperavam, o conteúdo da imagem derivada era parecido com a original; eles apenas transformaram uma imagem com vários graus 
+                de claro/escuro em uma imagem de contornos. Sendo assim, eles decidiram que o trabalho seria formado por quatro imagens: a original e as três derivadas, 
+                e chamaram o trabalho de "Derivadas de uma imagem". Apesar de ser falado em todos os meios que a obra é composta por quatro imagens, apenas três foram encontradas.
+            </p>
+            <p>Abaixo é possível ver o conjunto de obras</p>
+            <div class="derivadas">
+                <img src="images/grau_0.png"/>
+                <img src="images/grau_1.png"/>
+                <img src="images/grau_2.png"/>
+            </div>
+            <p>
+                Apesar de eles terem considerado realizar a derivada de outras imagens e de aperfeiçoar os procedimentos, "Derivadas de uma 
+                Imagem" foi o único trabalho que fizeram com o programa.
+            </p>
+            <p>
+                "Derivada de uma Imagem" foram expostas na Minigaleria da biblioteca do USIS, em São Paulo, na exposição chamada <i>Computer Plotter Art</i>(de 13 a 17 de março de 1970) e 
+                a imprensa deu ampla divulgação do fato, realçando que artistas brasileiros estavam expondo junto com trabalhos feitos com a mais alta tecnologia.
+                Esse trabalho também foi exibido em várias exposições internacionais e recebeu uma crítica favorável.
+            </p>
+        </article>
+        
+    </section>
+    <section class="content" id="experiencias">
+        <h2>Experiências no p5.js</h2>
+        <hr>
+        <p>Durante esse tempo de experiências eu testei várias formas de transformação de imagem. Eu gostaria de deixar claro que eu já tinha um conhecimento prévio da ferramenta, por isso fui logo para os testes de transformação de imagem</p>
+
+        <div>
+            <h3>Experiencias com transformação de imagem e imagem colorida</h3>
+            <div>
+                <p>
+                    Nesta primeira experiencia eu resolvi testar a transformação dos pixels de uma imagem em pontos. Para isso eu carreguei uma imagem no editor
+                    e implementei um código com a função de ler cada pixel da imagem carregada. Com isso, cada pixel lido foi transformado em ponto, utilizando exatamente a cor da imagem. 
+                    Isso me permitiu observar a imagem construída a partir de vários pontos coloridos, como se pode ver na figura abaixo.
+                </p>
+                <img src="images/eu-em-pixel.svg"/>
+            </div>
+            <p>
+                Para as próximas experiências eu utilizei uma imagem descarregada no site Pixaby
+            </p>
+            <div>
+                <p>
+                    Nesta experiência eu utilizei a mesma abordagem da anterior, só que com um novo código. Os pixels dessa imagem foram transformados em quadrado com largura e altura no valor dez.
+                    O valor do quadrado no valor dez permite que todo o espaço da imagem seja preenchido, fazendo com que o fundo do canvas não apareça.
+                </p>
+                <img src="images/experiemento-1-colorido.svg"/>
+            </div>
+            <div>
+                <p>
+                    Essa experiencia foi realizada utilizando o triângulo. Utilizando o triângulo eu percebi que a imagem fica muito parecida com a imagem transformada utilizando o quadrado
+                    por isso resolvi não utilizar mais essas forma geométrica nas experiências.
+                </p>
+                <img src="images/experimento-triangulo-colorido.svg"/>
+            </div>
+            <div>
+                <p>
+                    Essa experiencia foi realizada utilizando o círculo. Olhando de longe o efeito do circulo parece bastante com a experiência utilizando o quadrado. Suponho que seja por terem o mesmo tamanho.
+                </p>
+                <img src="images/experimento-2-colorido.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei apenas a função stroke do p5.js no fundo preto. Olhando a imagem é possivel perceber que mesmo utilizando apenas o contorno do círculo
+                    o conteúdo da imagem ainda é preservado, provavelmente pelo uso do fundo preto.
+                </p>
+                <img src="images/experimento-colorido-fundo-preto.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei apenas a função stroke do p5.js também mas agora com o fundo branco. Olhando a imagem é possivel perceber que no fundo branco essa abordagem 
+                    faz com que o conteúdo da imagem não fique tão preservado como na anterior.
+                </p>
+                <img src="images/experimento-stroke-fundo-branco.svg"/>
+            </div>
+            <h3 style="margin-top: 1.5rem;">Experiencias com transformação de imagem utilizando apenas tons de brilho</h3>
+            <p>A partir desse ponto eu já comecei a fazer as experiências pensando nas cores utilizadas na obra "Derivadas de uma Imagem", que são tons que vão do preto ao branco</p>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei linhas. As linhas são criadas de acordo com o nível de brilho da imagem.
+                    Se o pixel for mais escuro, a linha é pequena e com uma opacidade baixa; e se o pixel for mais claro, a linha é maior e com a opacidade alta. 
+                </p>
+                <img src="images/experiencia-linha-values.png"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei linhas e tentei aplicar uma rotação nas linhas para ver qual seria o efeito dela na imagem. Eu não segui com essa abordagem porque 
+                    a rotação faz com que o conteúdo da imagem seja totalmente perdido e não era isso que eu estava buscando.
+                </p>
+                <img src="images/experiencia-com-linha-e-rotacao.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu quis testar transformar os pixels da imagem em quadrados que variam de tamanho de acordo com o nível de brilho do pixel. 
+                    Os quadrados são menores se o nível de brilho for alto, e maiores se o nível de brilho for baixo.
+                </p>
+                <img src="images/derivada-maiores-blocos-em-areas-escuras - Copia.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu ainda estava testando transformar os pixels da imagem em quadrados que variam de tamanho de acordo com o nível de brilho do pixel. 
+                    Mas, nessa experiencia os quadrados são maiores se o nível de brilho for alto, e menores se o nível de brilho for baixo.
+                </p>
+                <img src="images/derivada-retangulo-menor-maior - Copia.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu estava testando transformar os pixels da imagem em circulos que variam de tamanho de acordo com o nível de brilho do pixel. 
+                </p>
+                <img src="images/derivada-circulo-menor-maior - Copia.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu transformei os pixels da imagem em circulos que não variam de tamanho, e utilizam cores neutras.
+                </p>
+                <img src="images/derivada-sem-variacao-circulo.svg"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu ainda estava testando transformar os pixels da imagem em figuras geométricas sem variação de tamanho, mas dessa vez utilizei o quadrado. 
+                    Nessa experiência eu percebi que utilizando o quadrado, a transformação preserva muito mais informação do que o circulo. Ele consegue deixar a imagem com um contraste maior.
+                </p>
+                <img src="images/derivada-sem-variacao-retangulo.svg"/>
+            </div>
+            <p> A partir deste momento eu comecei a fazer experiências com apenas sete tons de brilho. Essas experiências foram realizadas porque a obra "Derivada de uma Imagem" é com apenas sete tons</p>
+            <div>
+                <p>
+                    Essa experiência utiliza o quadrado e sete tons de brilho.
+                </p>
+                <img src="images/experimento-valores-retangulo-7-valores.png"/>
+            </div>
+            <div>
+                <p>
+                    Essa experiência é similar a anterior, com a única diferença de que essa foi realizada utilizando círculos no tamanho dez.
+                </p>
+                <img src="images/experimento-valores-circulo-fill-preenchido.png"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei o círculo com o tamanho vinte. Eu percebi que a cada aumento da figura geométrica, a imagem perde um pouco do seu conteúdo, pois os pixels vão se agrupando.
+                </p>
+                <img src="images/experimento-valores-circulo-20-7-valores-.png"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei o círculo com uma borda no valor quinze. Eu percebi que om esse valor na borda os circulos acabam entrando uns nos outros.
+                </p>
+                <img src="images/experimento-valores-circulo-stroke-15.png"/>
+            </div>
+            <div>
+                <p>
+                    Nessa experiência eu utilizei a mesma abordagem da anterior, mas utilizando um quadrado com a borda no valor quinze, sem cor sólida para preencher o quadrado.
+                </p>
+                <img src="images/experimento-valores-circulo-stroke-15-retangulo.png"/>
+            </div>
+        </div>
+    </section>
+    <section class="content" id="planejamento">
+        <h2>Planejamento da Releitura</h2>
+        <hr>
+        <p>
+            Nessa etapa, eu usei tudo que aprendi estudando a obra "Derivadas de uma Imagem" e o conhecimento que obtive com as experiências e comecei a planejar o que eu queria na releitura
+        </p>
+        <p>
+            Primeiramente, eu pensei no que deixa a obra marcante, fora o uso de formas geométricas. Eu percebi que era as cores, então eu decidi utilizar sete tons de brilho, assim
+            como foi utilizado em "Derivadas de uma Imagem".
+        </p>
+        <p>
+            Depois, eu escolhi o circulo para compor a obra, pois nas experiências eu percebi que ele trazia um nível de abstração maior para a imagem, que era algo que eu estava buscando.
+            Com essa abstração eu queria mostrar para o observador o quão rápido uma imagem pode ser transformada por um computador, transformando algo que pode ser muito significativo em 
+            apenas formas geométricas.
+        </p>
+        <p>
+            Com todas as decisões em mente, resolvi fazer um programa que não só transformasse um conjunto de imagens, mas que pudesse ser algo vivo, em constante transformação.
+            Com isso, decidi fazer um programa em que o usuário pudesse fazer o upload de uma imagem, e que pudesse também controlar o diâmetro dos círculos.
+        </p>
+    </section>
+    <section class="content" id="execucao">
+        <h2>Execução</h2>
+        <hr>
+        <p>
+            Nessa etapa eu produzi o programa, abaixo explico como ele funciona do ponto de vista técnico.
+        </p>
+        <p>
+            Primeiramente, como eu já tinha realizado várias experiências não precisei fazer algo do zero absoluto, apenas precisei adicionar alguns detalhes.
+        </p>
+        <p>
+            O programa foi desenvolvido com o p5.js. A lógica do programa é bem simples, ao fazer o upload da imagem, o programa ler todos os pixels da imagem e transforma ela em uma grade basicamente. Depois disso,
+            ele calcula o valor do brilho do pixel calculando a média dos valores de vermelho, verde e azul. Após calcular o valor do brilho o programa decide qual dos sete tons utilizar. 
+            Em seguida um círculo é desenhado na posição dos pixels analisados.
+        </p>
+        <p>
+            No programa tem um um botão deslizante, que o usuário pode interagir. Esse botão aumenta o diâmetro dos círculos, então, à medida que o usuário desliza para frente, ele soma um ao diâmetro do círculo e, se ele desliza para trás, ele diminui um. 
+            Com esse botão, o usuário consegue interagir com o programa e observar qual é o efeito dos círculos na imagem à medida que eles aumentam. Quanto menores os círculos, maior é a fidelidade à imagem original,
+             e quanto maiores os círculos, maior é o grau de abstração. 
+        </p>
+        <p>
+            O programa também permite salvar o resultado, ou seja, a imagem transformada em círculos, para ter alguma forma de arquivar essas transformações.
+        </p>
+    </section>
+</body>
+</html>

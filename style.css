@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: sans-serif;
+}
+
+#galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* #galeria img {
+      height: 300px;
+      margin: 30px 0;
+      display: inline-block;
+} */
+
+.navbar{
+    background-color: rgb(14, 13, 13);
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.content {
+    margin: 1rem 1.5rem;
+    line-height: 140%;
+}
+
+.content h1 {
+    padding: 10px 0;
+    line-height: 120%;
+}
+
+.content h2 {
+    padding: 10px 0;
+    line-height: 120%;
+}
+
+.content p {
+    padding: 10px 0;
+}
+
+.content-nav {
+    margin: 5rem 1.5rem 0 1.5rem;
+}
+
+.content-nav ul a {
+    text-decoration: underline;
+    color: black;
+    padding: 0.2rem 0;
+    cursor: pointer;
+}
+
+.derivadas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#program-access {
+    background-color: rgb(14, 13, 13);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid #000;
+    margin: 5px 0;
+}
+
+img{
+    height: 20rem;
+}
+
+@media (min-width: 320px) and (max-width = 599) {
+  * {
+    font-size: 14px;
+    text-align: justify;
+  }
+  programAccess{
+    padding: 50px;
+  }
+  
+}
